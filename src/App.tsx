@@ -38,9 +38,9 @@ export default function App() {
           cellSize={44}
           direction="diagonal"
           speed={0.35}
-          lineColor="rgba(37, 35, 33, 0.14)"
-          hoverColor="#bd4444"
-          hoverFillColor="#bd4444"
+          lineColor="rgba(175, 62, 62, 0.16)"
+          hoverColor="#cd5656"
+          hoverFillColor="#cd5656"
           fillOpacity={0.1}
           glow={0.3}
           twinkle={0.06}

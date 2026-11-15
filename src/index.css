@@ -4,13 +4,13 @@
    Design tokens — a 1984-flavoured editorial palette.
    ------------------------------------------------------------------ */
 @theme {
-  --color-cream: #f1dec4;
-  --color-paper: #fff8ef;
-  --color-ink: #252321;
-  --color-brick: #bd4444;
-  --color-sand: #d7bfa5;
-  --color-line: rgba(37, 35, 33, 0.18);
-  --color-line-soft: rgba(37, 35, 33, 0.1);
+  --color-cream: #e6e1c7;
+  --color-paper: #eaebd0;
+  --color-ink: #af3e3e;
+  --color-brick: #cd5656;
+  --color-sand: #da6c6c;
+  --color-line: rgba(175, 62, 62, 0.22);
+  --color-line-soft: rgba(175, 62, 62, 0.12);
 
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
