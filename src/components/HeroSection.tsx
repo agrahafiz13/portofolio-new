@@ -1,6 +1,8 @@
 import { ArrowDownRight, ArrowUpRight, Mail, MapPin } from 'lucide-react'
 import { identity, links } from '../data/site'
 import { BrandIcon } from './ui/BrandIcon'
+import { DepthText } from './DepthText'
+import { SplitFlapText } from './SplitFlapText'
 import { FigCaption } from './ui/FigCaption'
 import { Reveal } from './ui/Reveal'
 import { Window } from './ui/Window'
@@ -10,6 +12,19 @@ const terminalLines = [
   { prompt: 'role --list', output: 'web_developer / frontend_developer / it_support' },
   { prompt: 'location', output: 'indonesia' },
 ]
+
+// Extruded 3D treatment for the two headline lines.
+const titleDepth = {
+  layers: 26,
+  depth: 2.2,
+  faceColor: '#af3e3e',
+  depthColor: '#af3e3e',
+  tilt: 6,
+  hoverPush: 0.45,
+  orbitSpeed: 0.3,
+  fontSize: 'clamp(2.85rem,10.5vw,6.4rem)',
+  fontWeight: 700,
+} as const
 
 export function HeroSection() {
   return (
@@ -27,22 +42,38 @@ export function HeroSection() {
           {/* ---------------------------------------------- editorial column */}
           <div className="lg:col-span-7 xl:col-span-7">
             <Reveal onMount>
-              <h1
-                id="hero-title"
-                className="display text-[clamp(2.85rem,10.5vw,6.4rem)] leading-[0.86]"
-              >
-                <span className="block">Agra Alfian</span>
+              <h1 id="hero-title" className="display">
                 <span className="block">
-                  Hafiz
+                  <DepthText text="Agra Alfian" {...titleDepth} />
+                </span>
+                <span className="block">
+                  <DepthText text="Hafiz" {...titleDepth} />
                   <span className="ml-1 inline-block h-[0.13em] w-[0.13em] bg-brick align-baseline" />
                 </span>
               </h1>
             </Reveal>
 
-            <Reveal onMount delay={0.08} className="mt-8 max-w-[32ch] md:mt-10">
-              <p className="display text-[clamp(1.3rem,2.9vw,1.9rem)] leading-[1.08] tracking-[-0.02em] text-ink">
-                {identity.headline}
-              </p>
+            <Reveal onMount delay={0.08} className="mt-8 md:mt-10">
+              <SplitFlapText
+                words={identity.headline.split('\n')}
+                flipDuration={0.12}
+                stagger={0.05}
+                cycleDelay={2600}
+                charset="alphanumeric"
+                flipsPerChar={6}
+                order="left"
+                align="left"
+                tileStyle="board"
+                tileColor="#af3e3e"
+                textColor="#eaebd0"
+                glare={0.15}
+                depth={0.5}
+                tileRadius="0.22em"
+                gap="0.18em"
+                fontSize="clamp(0.8rem, 2.4vw, 1.5rem)"
+                loop
+                intro
+              />
             </Reveal>
 
             <Reveal onMount delay={0.14} className="mt-6 max-w-[52ch]">

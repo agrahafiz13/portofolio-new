@@ -15,7 +15,7 @@ export const identity = {
   phoneInternational: '628987892216',
   location: 'Indonesia',
   availability: 'Available for work',
-  headline: 'Building Digital Experiences Through Technology.',
+  headline: 'FrontEnd Developer\nNetworking & IT Support',
   description:
     'An aspiring Software and Frontend Developer with a background in computer networking, technical support, and digital development. Passionate about learning, solving problems, and creating meaningful digital solutions.',
   footerNote: 'Designed with curiosity. Built with technology.',
